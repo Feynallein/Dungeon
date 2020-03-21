@@ -156,6 +156,7 @@ GameObject:
   - component: {fileID: 314849247}
   - component: {fileID: 314849249}
   - component: {fileID: 314849250}
+  - component: {fileID: 314849251}
   m_Layer: 10
   m_Name: Ennemy
   m_TagString: Untagged
@@ -306,7 +307,21 @@ MonoBehaviour:
   animator: {fileID: 314849249}
   FloatingTextPrefab: {fileID: 2936633757730477636, guid: 294f4cbf8d5b3ad4eab05088a72446ea,
     type: 3}
+  entityHandler: {fileID: 314849251}
   maxHealth: 200
+--- !u!114 &314849251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314849244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 191caf52cffc9d34abf34843fc4bd60f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textToDestroy: []
 --- !u!1 &370301809
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,6 +338,7 @@ GameObject:
   - component: {fileID: 370301812}
   - component: {fileID: 370301816}
   - component: {fileID: 370301817}
+  - component: {fileID: 370301818}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -390,7 +406,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handler: {fileID: 370301817}
-  facingRight: 1
 --- !u!212 &370301813
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -508,18 +523,27 @@ MonoBehaviour:
   body: {fileID: 370301810}
   FloatingTextPrefab: {fileID: 2936633757730477636, guid: 294f4cbf8d5b3ad4eab05088a72446ea,
     type: 3}
-  colors:
-  - {r: 1, g: 0.80103827, b: 0, a: 0}
-  - {r: 0.9056604, g: 0.47662315, b: 0.004271993, a: 0}
-  - {r: 1, g: 0.1462264, b: 0.1462264, a: 0}
-  - {r: 1, g: 1, b: 1, a: 0}
-  textToDestroy: []
+  entityHandler: {fileID: 370301818}
+  facingRight: 1
   maxHealth: 50
   critChance: 10
   attackDammage: 20
   dodge: 10
   speed: 6
   attackRange: 0.5
+--- !u!114 &370301818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370301809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 191caf52cffc9d34abf34843fc4bd60f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textToDestroy: []
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
